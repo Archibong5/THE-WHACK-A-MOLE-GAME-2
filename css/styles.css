@@ -1,0 +1,74 @@
+html{
+  box-sizing: border-box;
+  font-size: 10px;
+  background: #1A5D1A;
+  color: white;
+  text-shadow: 1px 1px 4px black;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-size: 10rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+button{
+  height: 50px;
+  width: 100px;
+  border-radius: 50px;
+  font-weight: 900;
+  box-shadow: 0 0 10px black; 
+}
+
+.score{
+  background: rgba(255,255,255,0.2);
+  padding: 0 3rem;
+  line-height: 1;
+  border-radius: 1rem;
+}
+
+.game{
+  height: 400px;
+  width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.hole{
+  flex: 1 0 25%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hole:after{
+  display: block;
+  background: url(dirt.svg) bottom center no-repeat;
+  background-size: contain;
+  content: '';
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  bottom: -30px;
+  z-index: 2;
+}
+
+.mole{
+  background: url(mole.svg) bottom center no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: 50%;
+  position: absolute;
+  top: 100%;
+  transition: all 0.4s;
+}
+
+.hole.up .mole{
+  top: 0;
+}
